@@ -1,0 +1,13 @@
+<h1>Save any kind of movies</h1>
+<%= link_to "My lists", "lists" %>
+<%= link_to "New list", "lists/new" %>
+<div class="container">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-4 card justify-content-center align-items-center">
+      <%# <img src="app/assets/images/JustDoItTom.jpg" alt="Comedy meme"> %>
+        <%= list.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
