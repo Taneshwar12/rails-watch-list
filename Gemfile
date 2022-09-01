@@ -39,6 +39,9 @@ gem "simple_form", github: "heartcombo/simple_form"\
 # Our secret codes
 gem "dotenv-rails", groups: [:development, :test]
 
+# For our image uploads to heroku
+gem "cloudinary"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

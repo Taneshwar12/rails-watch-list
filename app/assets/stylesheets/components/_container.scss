@@ -1,0 +1,22 @@
+.container-index{
+  padding: 50px;
+  width: 100%;
+  .newMovie {
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.container-show{
+  padding: 50px;
+  width: 100%;
+}
+
+.container-show a {
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.collapse-show {
+  margin-bottom: 20px;
+}

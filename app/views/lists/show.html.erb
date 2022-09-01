@@ -1,4 +1,35 @@
-<h1><%= @list.name %></h1>
-<% @list.movies.each do |movie| %>
-  <%= movie.title %>
-<% end %>
+<div class="banner-show" style="background-image: url('<% cl_image_path @list.photo.key %>')">
+  <h1><%= @list.name %></h1>
+</div>
+<div class="container-show">
+  <div class="d-flex justify-content-end">
+    <div class="newList">
+      <a class="btn btn-success p-2" data-bs-toggle="collapse" href="#collapseExample" role="button"
+      aria-expanded="false" aria-controls="collapseExample">
+        Add a movie
+      </a>
+    </div>
+  </div>
+  <div class="collapse collapse-show" id="collapseExample">
+    <div class="card card-body">
+      <div class="card-title"><strong>Add Movie</strong></div>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-flex">
+    <% @list.movies.each do |movie| %>
+      <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+      <div class="card m-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %></h5>
+          <p class="card-text"><%= movie.overview %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%# <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>

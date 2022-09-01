@@ -1,13 +1,21 @@
-<div class="banner">
+<div class="banner-index">
   <h1>Save any kind of movies</h1>
 </div>
-
-<div class="container">
+<div class="container-index">
+  <div class="d-flex justify-content-between">
+    <div class="p-2">
+      <h2>My Lists</h2>
+    </div>
+    <div class="newList-index">
+      <a class="btn btn-success newMovie" href="/lists/new">Create a movie list</a>
+    </div>
+  </div>
   <div class="row">
     <% @lists.each do |list| %>
-      <div class="col-4 card justify-content-center align-items-center">
-        <%= list.name %>
-      </div>
+      <%# <%= cl_image_tag(, width: 400, height: 200, crop: :fill) %>
+        <div class="col-3 card card-index justify-content-center align-items-center">
+          <%= link_to "#{list.name}", "/lists/#{list.id}", class: 'listItems-index'%>
+        </div>
     <% end %>
   </div>
 </div>

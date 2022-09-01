@@ -1,12 +1,18 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand {
   width: 40px;
+  height: 40px;
+  // background-image: url("movie_icon.jpg");
+  background-image: url("movie_icon.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
