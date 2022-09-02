@@ -1,4 +1,4 @@
-<div class="banner-show" style="background-image: url('<%= @list.photo ? (cl_image_path @list.photo.key) : ("default_list_image.jpg") %>'">
+<div class="banner-show" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.8) 100%), url('<%= @list.photo ? (cl_image_path @list.photo.key) : ('https://res.cloudinary.com/djs8vtzox/image/upload/v1662092387/development/default_list_image_x7fm8z.webp') %>'">
   <h1><%= @list.name %></h1>
 </div>
 <div class="container-show">
