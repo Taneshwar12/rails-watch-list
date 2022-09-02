@@ -18,9 +18,9 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @bookmark = Bookmark.find(params[:id])
-    @bookmark.destroy
-    redirect_to list_path(@bookmark.list), status: :see_other
+    @bookmark = Bookmark.select { |b| b.movie_id == params[:id].to_i && b.list_id == params[:list_id].to_i }
+    @bookmark[0].destroy
+    redirect_to list_path(params[:list_id]), status: :see_other
   end
 
   private

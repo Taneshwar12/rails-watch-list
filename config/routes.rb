@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   root to: 'lists#index'
   get '/about', to: 'lists#about'
   resources :lists, only: %i[index new show create] do
-    resources :bookmarks, only: %i[new create]
+    resources :bookmarks, only: %i[new create destroy]
   end
-
-  resources :bookmarks, only: %i[destroy]
 end
