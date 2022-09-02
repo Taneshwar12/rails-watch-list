@@ -12,10 +12,10 @@
   </div>
   <div class="row">
     <% @lists.each do |list| %>
-      <%# <%= cl_image_tag(, width: 400, height: 200, crop: :fill) %>
-        <div class="col-3 card card-index justify-content-center align-items-center">
-          <%= link_to "#{list.name}", "/lists/#{list.id}", class: 'listItems-index'%>
-        </div>
+      <div class="col-3 card card-index justify-content-center align-items-center" style="background-image: linear-gradient(
+      to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.8) 100%), url('<%= cl_image_path list.photo.key %>')">
+        <%= link_to "#{list.name}", "/lists/#{list.id}", class: 'listItems-index'%>
+      </div>
     <% end %>
   </div>
 </div>

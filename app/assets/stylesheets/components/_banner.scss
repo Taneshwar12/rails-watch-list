@@ -36,7 +36,7 @@
   //     rgba(0, 0, 0, 0.8) 100%
   //   ),
   //   url("movie_theatre.jpg");
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -45,4 +45,46 @@
 .banner-show h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 500;
+}
+
+.banner-about {
+  padding: 200px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    rgba(26, 188, 156, 0.6),
+    rgba(26, 188, 156, 0) 0%,
+    rgba(26, 188, 156, 0.8) 100%
+  );
+}
+
+.banner-about h1 {
+  font-family: auto;
+}
+
+.banner-new {
+  padding: 100px;
+  padding-left: 120px;
+  text-align: left;
+  font-weight: 800;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  text-shadow: 0 0 5px rgb(112, 112, 112);
+  width: 100%;
+  height: 40vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("NewList.jpg");
+  background-color: rgba(136, 136, 136, 0.415);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

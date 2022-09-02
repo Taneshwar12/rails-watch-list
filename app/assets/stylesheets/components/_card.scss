@@ -20,4 +20,15 @@
   font-size: x-large;
   font-weight: 900;
   background-color: antiquewhite;
+  border-radius: 20px;
+  background-position: center;
+  text-shadow: 0 0 5px rgb(112, 112, 112);
+}
+
+.card-show {
+  margin: 5px;
+}
+
+.card-show .card-title {
+  font-weight: bold;
 }

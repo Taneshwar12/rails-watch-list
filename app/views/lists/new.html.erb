@@ -1,9 +1,13 @@
+<div class="banner-new">
+  <h1>Create a new List!</h1>
+</div>
 <div class="container">
-
-<h1>Create a new List!</h1>
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, :class =>"btn btn-primary" %>
-  <% end %>
+  <div class="form-new mb-3 p-5">
+  <h4>Details -</h4>
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, :class =>"btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
