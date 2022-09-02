@@ -1,4 +1,4 @@
-<div class="banner-show" style="background-image: url('<%= cl_image_path @list.photo.key %>')">
+<div class="banner-show" style="background-image: url('<%= @list.photo ? ("default_list_image.jpg") : (cl_image_path @list.photo.key) %>')">
   <h1><%= @list.name %></h1>
 </div>
 <div class="container-show">
@@ -23,10 +23,18 @@
   <div class="d-flex">
     <% @list.movies.each do |movie| %>
       <div class="card m-2 card-show" style="width: 18rem;">
-      <img class="card-img-top" src="<%= movie.poster_url %>" alt="Movie Image">
+        <img class="card-img-top" src="<%= movie.poster_url %>" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title"><%= movie.title %></h5>
           <p class="card-text"><%= movie.overview %></p>
+        </div>
+        <div class="d-flex justify-content-between p-3">
+          <div class="flex-item">
+            <p class="card-text">⭐ <%= movie.rating %></p>
+          </div>
+          <div class="flex-item">
+            <%= link_to "Delete", bookmark_path(movie.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{movie.title}?"} %>
+          </div>
         </div>
       </div>
     <% end %>

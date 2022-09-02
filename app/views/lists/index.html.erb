@@ -10,11 +10,12 @@
       <a class="btn btn-success newMovie" href="/lists/new">Create a movie list</a>
     </div>
   </div>
-  <div class="row">
+  <div class="row mb-2">
     <% @lists.each do |list| %>
-      <div class="col-3 card card-index justify-content-center align-items-center" style="background-image: linear-gradient(
-      to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.8) 100%), url('<%= cl_image_path list.photo.key %>')">
-        <%= link_to "#{list.name}", "/lists/#{list.id}", class: 'listItems-index'%>
+      <div class="col-3 p-3">
+        <div class="col-12 card card-index justify-content-center align-items-center" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.8) 100%), url('<%= list.photo.attached? ? (cl_image_path list.photo.key) : ('https://res.cloudinary.com/djs8vtzox/image/upload/v1662092387/development/default_list_image_x7fm8z.webp')  %>')">
+          <%= link_to "#{list.name}", "/lists/#{list.id}", class: 'listItems-index'%>
+        </div>
       </div>
     <% end %>
   </div>

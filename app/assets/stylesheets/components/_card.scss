@@ -1,5 +1,5 @@
 // INDEX PAGE
-.newList-index{
+.newList-index {
   color: white;
   font-weight: 500;
 }
@@ -13,13 +13,11 @@
   // background-position: center;
 }
 
-.card-index{
-  padding: 2px;
-  margin: 5px;
-  height: 150px;
+.card-index {
+  padding: 10px;
+  height: 175px;
   font-size: x-large;
   font-weight: 900;
-  background-color: antiquewhite;
   border-radius: 20px;
   background-position: center;
   text-shadow: 0 0 5px rgb(112, 112, 112);
@@ -27,6 +25,12 @@
 
 .card-show {
   margin: 5px;
+  a {
+    align-items: right;
+    padding: 10px;
+    text-decoration: none;
+    color: red;
+  }
 }
 
 .card-show .card-title {
